@@ -1,5 +1,5 @@
 // app.js
-const WEB_APP_URL = "COLE_AQUI_A_URL_DO_WEB_APP"; // ex: https://script.google.com/macros/s/XXXX/exec
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz5NyrlKYmKYkQxps5aLzr9uhQ7C9siOmSgyiMa_leTZI-ZelfmodwjahwlO1GGNHHx/exec"; // ex: https://script.google.com/macros/s/XXXX/exec
 
 const form = document.getElementById("leadForm");
 const btn = document.getElementById("submitBtn");
