@@ -63,13 +63,14 @@ body{
 .topbar{
   position:absolute;
   top:16px;
-  left:16px;
-  right:16px;
+  left:50%;
+  transform: translateX(-50%);
   padding: 6px 8px;
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items:center;
   z-index:2;
+  text-align:center;
 }
 
 .logo-text{
