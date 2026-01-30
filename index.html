@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Board 360 | Mentoria</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <div class="overlay"></div>
+
+    <header class="topbar">
+      <div class="brand-left">
+        <div class="logo-text">BOARD<span class="gold">360</span></div>
+        <div class="sub">Perguntas do 360</div>
+      </div>
+      <div class="brand-right">
+        <div class="logo-b">B</div>
+        <div class="logo-text">BOARD</div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h1>Mentoria Board 360</h1>
+      <p class="muted">Preencha para direcionarmos melhor sua mentoria.</p>
+
+      <!-- IMPORTANTE: cole aqui a URL do seu Web App do Apps Script -->
+      <form id="leadForm" class="form" method="POST" target="hidden_iframe">
+        <label>
+          <span>Nome completo</span>
+          <input name="nome" type="text" placeholder="Seu nome" required />
+        </label>
+
+        <label>
+          <span>Segmento atual</span>
+          <input name="segmento" type="text" placeholder="Ex.: Serviços, Indústria, Educação..." required />
+        </label>
+
+        <label>
+          <span>Área foco da mentoria</span>
+          <input name="areaFoco" type="text" placeholder="Ex.: Gestão, vendas, liderança..." required />
+        </label>
+
+        <button id="submitBtn" type="submit">Enviar</button>
+
+        <div id="status" class="status" aria-live="polite"></div>
+      </form>
+
+      <!-- iframe invisível para submissão sem CORS -->
+      <iframe name="hidden_iframe" id="hidden_iframe" class="hidden_iframe"></iframe>
+
+      <div class="footer-note">
+        Ao enviar, você concorda com o uso dos dados para contato sobre a mentoria.
+      </div>
+    </section>
+  </main>
+</body>
+</html>
