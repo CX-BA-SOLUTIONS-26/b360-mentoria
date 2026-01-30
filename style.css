@@ -3,19 +3,20 @@
   --gold2: #a77b3b;
   --white: #f3f2ef;
   --muted: rgba(243,242,239,.76);
-  --card: rgba(7, 12, 11, .52);
-  --card2: rgba(7, 12, 11, .32);
+  --card: rgba(6, 10, 9, .58);
+  --card2: rgba(6, 10, 9, .34);
   --stroke: rgba(199,162,90,.30);
   --stroke2: rgba(199,162,90,.16);
 }
 
 *{ box-sizing: border-box; }
 html,body{ height:100%; }
+
 body{
   margin:0;
   font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--white);
-  background:#f3f2ef;
+  background:#06110f;
 
   background-image: url("./bg.jpg");
   background-size: cover;
@@ -24,6 +25,7 @@ body{
   background-attachment: fixed;
 }
 
+/* CONTAINER PRINCIPAL */
 .page{
   min-height: 100vh;
   position: relative;
@@ -34,15 +36,18 @@ body{
   overflow:hidden;
 }
 
+/* OVERLAY */
 .overlay{
   position:absolute;
   inset:0;
+  z-index:1;
   background:
     radial-gradient(1100px 700px at 18% 12%, rgba(0,0,0,.10), rgba(0,0,0,.55)),
     radial-gradient(900px 520px at 80% 85%, rgba(199,162,90,.08), rgba(0,0,0,.45));
   pointer-events:none;
 }
 
+/* TOPO */
 .topbar{
   position:absolute;
   top:18px;
@@ -106,7 +111,12 @@ body{
   inset:0;
   border-radius: 20px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(199,162,90,.55), rgba(199,162,90,.08), rgba(167,123,59,.28));
+  background: linear-gradient(
+    135deg,
+    rgba(199,162,90,.55),
+    rgba(199,162,90,.08),
+    rgba(167,123,59,.28)
+  );
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -127,7 +137,7 @@ body{
   font-size: 13px;
 }
 
-/* GRID mais alinhado */
+/* FORM */
 .form{
   display:grid;
   gap: 12px;
@@ -144,7 +154,7 @@ label span{
 
 input{
   width:100%;
-  padding: 12px 12px;
+  padding: 12px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,.10);
   outline: none;
@@ -156,11 +166,16 @@ input::placeholder{
   color: rgba(243,242,239,.38);
 }
 
+input:hover{
+  border-color: rgba(199,162,90,.22);
+}
+
 input:focus{
   border-color: rgba(199,162,90,.58);
   box-shadow: 0 0 0 3px rgba(199,162,90,.14);
 }
 
+/* BOTÃO */
 button{
   margin-top: 8px;
   padding: 12px 14px;
@@ -176,8 +191,15 @@ button{
   transition: transform .12s ease, filter .12s ease;
 }
 
-button:hover{ transform: translateY(-1px); filter: brightness(1.02); }
-button:active{ transform: translateY(0px); filter: brightness(.98); }
+button:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+button:active{
+  transform: translateY(0);
+  filter: brightness(.98);
+}
 
 button:disabled{
   opacity: .70;
@@ -185,6 +207,7 @@ button:disabled{
   transform:none;
 }
 
+/* STATUS */
 .status{
   min-height: 18px;
   font-size: 12px;
@@ -206,12 +229,4 @@ button:disabled{
   border:0;
   position:absolute;
   left:-9999px;
-}
-
-body::after{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:url("./bg.jpg") center / cover no-repeat;
-  z-index:-1;
 }
