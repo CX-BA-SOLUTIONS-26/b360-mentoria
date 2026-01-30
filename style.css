@@ -93,6 +93,13 @@ body{
   align-items:center;
   gap:10px;
 }
+
+.brand-left{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .logo-b{
   width:34px;
   height:34px;
