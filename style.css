@@ -38,8 +38,8 @@ body{
   position:absolute;
   inset:0;
   background:
-    radial-gradient(1100px 700px at 18% 12%, rgba(0,0,0,.10), rgba(0,0,0,.62)),
-    radial-gradient(900px 520px at 80% 85%, rgba(199,162,90,.10), rgba(0,0,0,.55));
+    radial-gradient(1100px 700px at 18% 12%, rgba(0,0,0,.10), rgba(0,0,0,.55)),
+    radial-gradient(900px 520px at 80% 85%, rgba(199,162,90,.08), rgba(0,0,0,.45));
   pointer-events:none;
 }
 
@@ -206,4 +206,12 @@ button:disabled{
   border:0;
   position:absolute;
   left:-9999px;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url("./bg.jpg") center / cover no-repeat;
+  z-index:-1;
 }
