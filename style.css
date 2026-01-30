@@ -1,0 +1,170 @@
+/* style.css */
+:root{
+  --gold: #c7a25a;
+  --white: #f2f2f2;
+  --muted: rgba(255,255,255,.75);
+  --card: rgba(0,0,0,.35);
+  --stroke: rgba(199,162,90,.28);
+}
+
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--white);
+  background:#06110f;
+}
+
+.page{
+  min-height:100vh;
+  position:relative;
+  padding: 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+
+  /* use o nome real do arquivo */
+  background-image: url("./FUNDO - B360.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background: radial-gradient(1000px 600px at 20% 10%, rgba(0,0,0,.18), rgba(0,0,0,.62));
+  pointer-events:none;
+}
+
+.topbar{
+  position:absolute;
+  top:18px;
+  left:18px;
+  right:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:2;
+}
+
+.logo-text{
+  letter-spacing: .22em;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.gold{ color: var(--gold); }
+
+.sub{
+  margin-top:6px;
+  font-size:12px;
+  color: var(--muted);
+  letter-spacing:.08em;
+}
+
+.brand-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.logo-b{
+  width:34px;
+  height:34px;
+  border:1px solid var(--stroke);
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  font-weight:700;
+  color: var(--gold);
+  background: rgba(0,0,0,.25);
+}
+
+.card{
+  position:relative;
+  z-index:2;
+  width:min(560px, 94vw);
+  padding: 26px 22px;
+  border-radius: 18px;
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 50px rgba(0,0,0,.45);
+}
+
+.card h1{
+  margin:0 0 6px;
+  font-size: 22px;
+  letter-spacing:.02em;
+}
+.muted{
+  margin:0 0 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.form{
+  display:grid;
+  gap: 12px;
+}
+
+label span{
+  display:block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+input{
+  width:100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.12);
+  outline: none;
+  background: rgba(0,0,0,.35);
+  color: var(--white);
+}
+
+input:focus{
+  border-color: rgba(199,162,90,.55);
+  box-shadow: 0 0 0 3px rgba(199,162,90,.15);
+}
+
+button{
+  margin-top: 6px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, rgba(199,162,90,.95), rgba(151,115,62,.95));
+  color: #0b0f0e;
+  cursor:pointer;
+}
+
+button:disabled{
+  opacity: .65;
+  cursor: not-allowed;
+}
+
+.status{
+  min-height: 18px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.footer-note{
+  margin-top: 14px;
+  font-size: 11px;
+  color: rgba(255,255,255,.6);
+}
+
+.hidden_iframe{
+  width:0;
+  height:0;
+  border:0;
+  position:absolute;
+  left:-9999px;
+}
