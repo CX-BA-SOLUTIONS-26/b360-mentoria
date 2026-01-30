@@ -73,20 +73,6 @@ body{
   text-align:center;
 }
 
-.logo-text{
-  letter-spacing: .28em;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.gold{ color: var(--gold); }
-
-.sub{
-  margin-top: 4px;
-  font-size: 11px;
-  opacity: .85;
-}
-
 .brand-right{
   display:flex;
   align-items:center;
