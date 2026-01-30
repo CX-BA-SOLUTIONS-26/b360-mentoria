@@ -15,21 +15,23 @@ body{
   margin:0;
   font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--white);
-  background:#06110f;
+  background:#f3f2ef;
+
+  background-image: url("./bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .page{
-  min-height:100vh;
-  position:relative;
+  min-height: 100vh;
+  position: relative;
   padding: 26px;
   display:flex;
   align-items:center;
   justify-content:center;
   overflow:hidden;
-
-  background-image: url("./bg.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .overlay{
